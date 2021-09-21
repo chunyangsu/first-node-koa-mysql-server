@@ -3,7 +3,10 @@ const Router = require('koa-router')
 const router = new Router()
 
 // 引入控制器里面的方法
-const { getUserList, createUser } = require('../controllers/user')
+const {
+  getUserList,
+  createUser
+} = require('../controllers/user')
 
 // 总路由添加前缀/user,总地址变为http://localhost:3000/user
 router.prefix('/user')
@@ -15,7 +18,7 @@ router.prefix('/user')
 router.get('/list', getUserList)
 
 // 新增用户的路由
-router.post('/list', createUser)
+router.post('/', createUser)
 
 // 导出路由备用
 module.exports = router

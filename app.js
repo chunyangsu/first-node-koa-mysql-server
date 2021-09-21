@@ -14,6 +14,9 @@ const bodyParser = require('koa-bodyparser')
 // 创建实例
 const app = new Koa()
 
+// 调用
+app.use(bodyParser())
+
 app.use(async (ctx, next) => {
   ctx.body = 'hello node!'
   await next();
@@ -35,8 +38,6 @@ app.use(
   })
 )
 
-// 调用
-app.use(bodyParser())
 // 进入接口
 // get方法取参数 ctx.request.query
 // post方法取参数 ctx.request.body

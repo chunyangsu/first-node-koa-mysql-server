@@ -19,8 +19,7 @@ class Users {
 
   // 新增用户
   async createUser(ctx) {
-    console.log(121);
-    console.log(ctx.request.body);
+    ctx.body = '114'
   }
 }
 
