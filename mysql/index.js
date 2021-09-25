@@ -16,7 +16,7 @@ function __connection() {
     host: "localhost", // 本地数据库的地址
     user: "root", // 用户名
     password: "root", // 密码
-    database: "users" // 数据库名称
+    database: "owl" // 数据库名称
   });
   // 2. 连接数据库
   connection.connect();
