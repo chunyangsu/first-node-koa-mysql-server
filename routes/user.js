@@ -5,7 +5,8 @@ const router = new Router()
 // 引入控制器里面的方法
 const {
   getUserList,
-  createUser
+  createUser,
+  deleteUser
 } = require('../controllers/user')
 
 // 总路由添加前缀/user,总地址变为http://localhost:3000/user
@@ -19,6 +20,9 @@ router.get('/list', getUserList)
 
 // 新增用户的路由
 router.post('/', createUser)
+
+// 删除用户的路由
+router.delete('/:id', deleteUser)
 
 // 导出路由备用
 module.exports = router
