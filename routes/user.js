@@ -6,6 +6,8 @@ const router = new Router()
 const {
   getUserList,
   createUser,
+  updateUser,
+  getUserDetail,
   deleteUser
 } = require('../controllers/user')
 
@@ -20,6 +22,12 @@ router.get('/list', getUserList)
 
 // 新增用户的路由
 router.post('/', createUser)
+
+// 编辑用户的路由
+router.put('/', updateUser)
+
+// 获取用户详情的路由
+router.get('/detail/:id', getUserDetail)
 
 // 删除用户的路由
 router.delete('/:id', deleteUser)
