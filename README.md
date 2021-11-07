@@ -82,7 +82,7 @@ npm install mysql--save
 
 1. `node app.js`
 
-2. `npm start`
+2. `npm start`(修改配置后可使用)
 
 ## 连接数据库
 

@@ -11,14 +11,13 @@ let dataObj = {
 class Users {
   // 获取用户列表(携带查询条件)
   async getUserList(ctx) {
-    // const query = ctx.request.query // 获取查询的参数
-    // if (query.name && query.name !== '') {
-    //   // 查询条件不为空
-    //   var sql = `select * from user_list where name = '${query.name}'`
-    // } else {
-    //   var sql = 'select * from `user_list`'
-    // }
-    var sql = 'select * from `user_list`'
+    const query = ctx.request.query // 获取查询的参数
+    if (query.name && query.name !== '') {
+      // 查询条件不为空
+      var sql = `select * from user_list where name = '${query.name}'`
+    } else {
+      var sql = 'select * from `user_list`'
+    }
     var result = await dataBase.query(sql)
     dataObj.data = result
     ctx.response.body = dataObj
