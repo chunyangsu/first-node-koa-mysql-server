@@ -50,5 +50,5 @@ routes(app)
 
 // 设置端口号
 app.listen(3000, () => {
-  console.log('服务启动了！')
+  console.log('组织权限的服务启动了！')
 })

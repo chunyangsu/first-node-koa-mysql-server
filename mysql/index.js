@@ -31,7 +31,7 @@ function __connection() {
 //   console.log(results); //返回查询数据库的结果
 // })
 
-// 暴露 query 方法，供 model 模块使用
+// 暴露 query 方法，供 controllers 模块使用
 exports.query = function (sql, parmas = null) {
   //1.获取数据库连接对象
   var connection = __connection();
